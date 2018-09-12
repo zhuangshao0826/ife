@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>flex</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,
+        html {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            display: flex;
+        }
+        .left {
+            width: 200px;
+            height: 100%;
+            background: #6c6;
+        }
+        .right {
+            flex: auto;
+            height: 100%;
+            background: #e6e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left"></div>
+    <div class="right"></div>
+</body>
+
+</html>

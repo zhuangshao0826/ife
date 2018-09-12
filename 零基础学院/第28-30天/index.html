@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            li {
+                list-style-type: none;
+            }
+            .wrapper {
+                margin: 40px auto;
+                width: 240px;
+                position: relative
+            }
+            .wrapper input {
+                font-size: 16px;
+                border: 1px solid #666;
+                width: 100%;
+                padding: 10px 6px;
+                outline: none;
+            }
+            #email-sug-wrapper {
+                overflow: hidden;
+                border: 1px solid rgba(38,52,43,.3);
+                background: #eee;
+                border-top: none;
+                position: absolute;
+                left: 0;
+                top: 40px;
+                right: 0;
+            }
+            #email-sug-wrapper li{
+                padding: 2px 5px;
+                border-top: 1px solid #000;
+            }
+            #email-sug-wrapper li:hover{
+                background: #87e;
+                cursor: pointer;
+            }
+            .select {
+            background: rgb(255, 127, 127);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <input id="email-input" type="text">
+            <ul id="email-sug-wrapper" class="email-sug" style="display:none"></ul>
+        </div>
+        <script>
+            function $(id) {
+                return document.getElementById(id)
+            }
+            // 邮箱后缀List参考
+            var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
+
+        </script>
+        <script src="./code1.js"></script>
+    </body>
+</html>

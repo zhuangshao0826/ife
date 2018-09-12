@@ -1,0 +1,177 @@
+/* reset.css */
+
+html, body, ul, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* main.css */
+
+body,html,.jianli {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+}
+
+.jianli {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    height: auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 1px 10px #CCCCEE;
+    background: #FFE;
+}
+
+header h1 {
+    font-size: 45px;
+    font-style: normal;
+    font-weight: bolder;
+    color: darkgray;
+}
+
+
+.content {
+    margin: 50px;
+}
+
+.person-info {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+}
+
+.person-info h3{
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.person-info p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.person-info p span {
+    font-size: 15px;
+    font-weight: normal;
+    color: #454e51;
+}
+
+.person-info p span::before {
+    content: " ";
+    display: inline-block;
+    width: 5px;
+}
+
+.person-info p a {
+    font-size: 15px;
+    font-weight: normal;
+    color: #454e51;
+}
+
+.person-info p a:visited {
+    color: #454000;
+}
+
+.person-info p a:hover {
+    text-decoration: underline;
+    background: #eee;
+    color: red;
+}
+
+.person-info p a:active {
+    color: green;
+}
+
+.study-exp {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000; 
+}
+
+.study-exp .mid-title {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.study-exp li p {
+    padding-top: 6px;
+    color: #795548;
+} 
+
+.study-exp li dl {
+    margin-top: 5px;
+}
+
+.study-exp li dt {
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.study-exp li span {
+    font-size: 16px;
+    color: #454e51;
+}
+
+.study-exp li :last-child {
+    margin-bottom: 30px;
+}
+
+.mid-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.skill{
+    padding-bottom: 25px;
+}
+
+.skill .mid-title{
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.skill ul li{
+    list-style-type: decimal;
+}
+
+.skill ul li {
+    margin-left: 25px;
+    padding-left: 2px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #454e51;
+}

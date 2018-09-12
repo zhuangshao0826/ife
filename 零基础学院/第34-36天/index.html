@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="region-wrapper">
+                <h4>地区:</h4>
+                <!-- <form action="submit" method="GET" accept-charset="utf-8">     
+                    <input type="radio" name="region" id="east" value="east" class="region-radio">
+                    <label for="east">华东</label>
+                    <input type="radio" name="region" id="south" value="south" class="region-radio">
+                    <label for="south">华南</label>
+                    <input type="radio" value="north" id="north" name="region" class="region-radio">
+                    <label for="north">华北</label>
+                </form> -->
+            </div>
+            <div id="product-wrapper">
+                <h4>商品:</h4>
+                <!-- <form action="submit" method="get" accept-charset="utf-8">
+                    <label><input type="radio" name ="product-select" id="phone" value="手机">手机</label>
+                    <label><input type="radio" name ="product-select" id="notebook" value="笔记本">笔记本</label>
+                    <label><input type="radio" name ="product-select" id="voicebox" value="智能音箱">智能音箱</label>	
+                </form>	 -->
+            </div>
+            <div id="table-wrapper"></div>
+            <div id="chart-wrapper">
+                <svg id="bar-graph" viewbox="0, 0, 700, 300"></svg>
+            </div>
+        </div>
+        <script>
+            function $(id) {
+                return document.getElementById(id)
+            }
+        </script>
+        <script src="./js/data.js"></script>
+        <script src="./js/checkbox.js"></script>
+        <script src="./js/getData.js"></script>
+        <script src="./js/table.js"></script>
+        <script src="./js/mergetable.js"></script>
+        <script src="./js/bar.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

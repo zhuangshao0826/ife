@@ -1,0 +1,16 @@
+.info-item-name, .info-item, .contact-item, .contact-item-name {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.info-item-name, .contact-item-name {
+    margin-right: 10px; 
+}
+
+.info-item, .contact-item {
+    margin-right: 25px;
+}
+
+h3,p {
+    margin: 5px 0;
+}

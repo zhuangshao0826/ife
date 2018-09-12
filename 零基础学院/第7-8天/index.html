@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>布局</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,html,ul {
+            padding: 0;
+            margin: 0;
+        }
+        li, ul {
+            list-style-type: none;
+        }
+        header {
+            height: 80px;
+            background: #333;
+        }
+        .header-content {
+            width: 960px;
+            margin: 0 auto;
+        }
+        .logo {
+            display: inline-block;
+            margin: 0;
+            color: #fff;
+            font-size: 30px;
+            line-height: 80px;
+            font-weight: bold;
+        }
+        .header-nav {
+            float: right;
+        }
+        .header-nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .header-content li a {
+            color: #fff;
+            line-height: 80px;
+        }
+        .banner {
+            background: #66bb33;
+            height: 300px;
+            position: relative;
+        }
+        .banner ul {
+            position: absolute;
+            right: 50px;
+            bottom: 20px;
+            display: flex;
+            align-items: flex-end;
+        }
+        .banner ul li {
+            display: flex;
+            align-items: flex-end;
+            width: 30px;
+            border: 1px solid #aaa;
+            background: #fff;
+            opacity: 0.5;
+            transition: all 0.5s;
+        }
+        .banner ul a {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .banner-active, .banner ul li:hover {
+            height: 50px;
+            opacity: .9;
+        }
+        .main-nav {
+            height: 80px;
+            border-bottom: 1px solid #ccc;
+        }
+        .main-nav ul {
+            display: flex;
+            align-items: flex-end;
+            width: 960px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .main-nav ul a {
+            display: inline-block;
+            width: 105px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #333;
+            text-decoration: none;
+            position: relative;
+            bottom: -1px;
+            border: 1px solid #ccc;
+            border-radius: 25px 25px 0 0;
+            background: #eee;
+        }
+        .main-nav .main-nav-active {
+            border-bottom: none;
+            background: #fff;
+        }
+        .content {
+            margin: 0 auto;
+            width: 960px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content .content-item {
+            border: 1px solid #ccc;
+            padding: 80px;
+            margin: 10px 10px 10px 0;
+        }
+        .content4,
+        .content5,
+        .content6,
+        .content7 {
+            flex-grow: 1;
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content10 {
+            flex-flow: 1;
+            flex-grow: 1;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">LOGO</div>
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="#">Github</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="banner">
+        <ul>
+            <li>
+                <a href="#">1</a>
+            </li>
+            <li class="banner-active">
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+        </ul>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li>
+                <a href="#" class="main-nav-active">HOME</a>
+            </li>
+            <li>
+                <a href="#">PROFILE</a>
+            </li>
+            <li>
+                <a href="#">ABOUT</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="content-item content1">My content1</div>
+        <div class="content-item content2">My content2</div>
+        <div class="content-item content3">My content3</div>
+        <div class="content-item content4">content4</div>
+        <div class="content-item content5">content5</div>
+        <div class="content-item content6">content6</div>
+        <div class="content-item content7">content7</div>
+        <div class="content-item content8">My content8</div>
+        <div class="content-item content9">My content9</div>
+        <div class="content-item content10">My content10</div>
+    </div>
+    <footer>
+        ©ZhuangShao 2018
+    </footer>
+</body>
+
+</html>

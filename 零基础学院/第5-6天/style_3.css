@@ -1,0 +1,50 @@
+html,body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.info-item-name, .info-item, .contact-item, .contact-item-name{
+    display: inline-block;
+    font-size: 18px;
+}
+
+.info-item-name, .contact-item-name {
+    margin-right: 10px; 
+}
+
+.info-item, .contact-item {
+    margin-right: 25px;
+}
+
+h3,p {
+    margin: 5px 0;
+}
+
+h1 {
+    margin: 0;
+    background: #858585;
+    height: 100px;
+    line-height: 100px;
+    padding: 20px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.info-title, .contact-title, .ability-title, .education-title, .project-title{
+    float: left;
+    height: 100%;
+    margin: 0;
+    line-height: 160px;
+    background: #D6D6D6;
+    font-size: 23px;
+    margin-right: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.item {
+    height: 160px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
