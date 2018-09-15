@@ -35,3 +35,43 @@ let sourceData = [{
     region: "华南",
     sale: [10, 40, 10, 6, 5, 6, 8, 6, 6, 6, 7, 26]
 }];
+
+// 判断localstorage是否存在 存在读取
+function readData() {
+    let localData=localStorage.getItem("newdata")
+    // if(localData){
+    //     data=JSON.parse(localData)
+    // }
+    // else{
+        getData()
+    // }
+}
+// 存储修改数据
+function storage(data) {
+    if(window.localStorage){
+        // “newdata”缓存是否存在
+        if(localStorage.getItem("newdata")){
+            // 读取缓存 转化为json格式
+            let localData=JSON.parse(localStorage.getItem("newdata"))
+            for(let i=0;i<localData.length;i++){
+                if(localData[i].region==data[i].region && localData[i].product==data[i].product){
+                    localData[i].sale=data[i].sale
+                    let newLocalData=JSON.stringify(localData)
+                    localStorage.setItem("newdata",newLocalData)
+                    break
+                }
+                else{
+                    localData.push(data)
+                    let addNewLocalData=JSON.stringify(localData)
+                    localStorage.setItem("newdata", addNewLocalData)
+                }
+            }
+        }
+        else{
+            let newSourceData = [];
+            newSourceData.push(data)
+            let newdata=JSON.stringify(newSourceData)
+            localStorage.setItem("newdata", newdata)
+        }
+    }
+}
