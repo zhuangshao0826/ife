@@ -36,42 +36,51 @@ let sourceData = [{
     sale: [10, 40, 10, 6, 5, 6, 8, 6, 6, 6, 7, 26]
 }];
 
-// 判断localstorage是否存在 存在读取
-function readData() {
-    let localData=localStorage.getItem("newdata")
-    // if(localData){
-    //     data=JSON.parse(localData)
-    // }
-    // else{
-        getData()
-    // }
+/**
+ * 返回处理后的sourcedata （localstorage中有的数据拿出并修改）
+ * @param {*} sourceData  原始数据
+ */
+function initData(sourceData) {
+    const localData = JSON.parse(localStorage.getItem("newdata"))
+    if(localData){
+        sourceData.forEach(element => {
+            localData.forEach(ele => {
+                if(element.region===ele.region && element.product===ele.product){
+                    element.sale=ele.sale
+                }
+            })
+        });
+    }
+    console.log(sourceData)
+    return sourceData
 }
-// 存储修改数据
+/**
+ * 存储数据在localstorage
+ * @param {*} data  修改的数据｛productxxxx regionxxx salexxx｝ 
+ */
 function storage(data) {
     if(window.localStorage){
-        // “newdata”缓存是否存在
+        // newdata 缓存是否存在
         if(localStorage.getItem("newdata")){
             // 读取缓存 转化为json格式
             let localData=JSON.parse(localStorage.getItem("newdata"))
+            
             for(let i=0;i<localData.length;i++){
-                if(localData[i].region==data[i].region && localData[i].product==data[i].product){
-                    localData[i].sale=data[i].sale
+                if(localData[i].region==data.region && localData[i].product==data.product){
+                    localData[i].sale=data.sale
                     let newLocalData=JSON.stringify(localData)
                     localStorage.setItem("newdata",newLocalData)
                     break
                 }
-                else{
-                    localData.push(data)
-                    let addNewLocalData=JSON.stringify(localData)
-                    localStorage.setItem("newdata", addNewLocalData)
-                }
             }
-        }
-        else{
-            let newSourceData = [];
-            newSourceData.push(data)
-            let newdata=JSON.stringify(newSourceData)
-            localStorage.setItem("newdata", newdata)
+            localData.push(data)
+            let addLocalData=JSON.stringify(localData)
+            localStorage.setItem("newdata", addLocalData)
+        }else{
+            let addNewLocalData=JSON.stringify(data)
+            localStorage.setItem("newdata", addNewLocalData)
         }
     }
 }
+
+export {sourceData,initData,storage} 

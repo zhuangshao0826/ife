@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%=htmlWebpackPlugin.options.title%>
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h2>产品销量统计</h2>
+    <div class="container">
+        <div class="container-header">
+            <div id="region-wrapper">
+                <h4>地区:</h4>
+            </div>
+            <div id="product-wrapper">
+                <h4>商品:</h4>
+            </div>
+        </div>
+        <div class="container-main">
+            <div id="table-wrapper"></div>
+            <div class="chart-wrapper">
+                <svg id="bar-graph"></svg>
+                <canvas id="line-chart" width="500" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        function $(id) {
+            return document.getElementById(id)
+        }
+        const REGION = $("region-wrapper")
+        const PRODUCT = $("product-wrapper")
+
+        let tableWrapper = $('table-wrapper')
+        let table = document.createElement('table')
+        table.setAttribute('id', 'table')
+    </script>
+</body>
+
+</html>
