@@ -77,7 +77,9 @@ function storage(data) {
             let addLocalData=JSON.stringify(localData)
             localStorage.setItem("newdata", addLocalData)
         }else{
-            let addNewLocalData=JSON.stringify(data)
+            let newdata=[]
+            newdata[0]=data
+            let addNewLocalData=JSON.stringify(newdata)
             localStorage.setItem("newdata", addNewLocalData)
         }
     }
