@@ -1,0 +1,88 @@
+/*main.css*/
+.container {
+	max-width: 80%;
+	margin: 10px auto;
+	border: 1px solid #aaa;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+h2 {
+	margin-top: 40px;
+	font-size: 30px;
+	text-align: center;
+	color: #000;
+	font-weight: 500;
+	line-height: 70px;
+	height: 70px;
+	font-family: sans-serif;
+}
+
+/* 表单 */
+.container-header {
+	width: 100%;
+	padding-left: 10px;
+	font-size: 16px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #aaa;
+}
+
+
+table { 
+	width: 80%; 
+	border-collapse: collapse;
+	padding: 0;
+	margin: 10px auto;
+}
+
+th,td {
+	border: 1px solid #aaa;
+	text-align: center;
+	padding: 5px 20px;
+	margin: 0;
+}
+
+td {
+	position: relative;
+  }
+  
+  td i {
+	display: none;
+  }
+
+td:hover i {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	cursor: pointer;
+	font-size: 22px;
+	color: #3df;
+}
+
+td input {
+	width: 68px;
+	text-align: center;
+	font-size: 13px;
+}
+
+td button {
+	background: #fff;
+	border: #3fb 1px solid;
+	font-size: 10px;
+	border-radius: 2%;
+}
+
+.chart-wrapper {
+	border: 1px solid #aaa;
+	margin: 0 auto;
+	border-radius: 10px;
+	background: #fff;
+	overflow: hidden;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+}
+
